@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/styles/style.css">
+</head>
+<body>
+     <main id="calculator">
+        <div class="container">
+            <div class="view">
+                <div class="input-wrapper">
+                    <input type="text" readonly>
+                </div>
+                <div class="screen-result">
+                    <span>=</span>
+                    <p id="result"></p>
+                </div>
+            </div>
+            <div class="buttons-container">
+                 <button>CE</button>
+                 <button id="clear">C</button>
+                 <button onclick="calculate(this)">%</button>
+                 <button class="operator"  onclick="calculate(this)">/</button>
+                 <button onclick="calculate(this)">7</button>
+                 <button onclick="calculate(this)">8</button>
+                 <button onclick="calculate(this)">9</button>
+                 <button class="operator"  onclick="calculate(this)">*</button>
+                 <button onclick="calculate(this)">4</button>
+                 <button onclick="calculate(this)">5</button>
+                 <button onclick="calculate(this)">6</button>
+                 <button class="operator"  onclick="calculate(this)">-</button>
+                 <button onclick="calculate(this)">1</button>
+                 <button onclick="calculate(this)">2</button>
+                 <button onclick="calculate(this)">3</button>
+                 <button class="operator"  onclick="calculate(this)">+</button>
+                 <button onclick="calculate(this)"><img src="src/styles/assets/plusminus.svg" alt=""></button>
+                 <button onclick="calculate(this)">0</button>
+                 <button onclick="calculate(this)">,</button>
+                 <button class="equal" onclick="calculate(this)">=</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="src/script.js"></script>
+</body>
+</html>

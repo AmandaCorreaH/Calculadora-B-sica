@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+ --ft-family: "Lato", sans-serif;
+ --purple-black: #462878;
+ --purple: #7F45E2;
+ --container: #2D2A37;
+ --text-calc: #6B6B6B;
+ --text: #EBEBEB;
+}
+
+body{
+    background: linear-gradient(90deg, #807ECE, #8E7ECE);
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+
+#calculator{
+    width: 356px;
+    height: 566px;
+    padding: 54px 32px 32px;
+    border-radius: 48px;
+    background-color: var(--container);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 188px 52px rgba(0, 0, 0, 0.01), 0px 120px 48px rgba(0, 0, 0, 0.04), 0px 68px 41px rgba(0, 0, 0, 0.15), 0px 30px 30px rgba(0, 0, 0, 0.26), 0px 8px 17px rgba(0, 0, 0, 0.29), inset 0px 6px 8px rgba(255, 255, 255, 0.1), inset 0px -4px 5px rgba(0, 0, 0, 0.22);
+}
+
+.view{
+    margin-bottom: 26px;
+    padding-inline: 22px;
+
+    & .input-wrapper{
+        display: flex;
+        justify-content: end;
+        text-align: end;
+        margin-bottom: 8px;
+        overflow: hidden;
+    }
+
+    & .input-wrapper input{
+        all: unset;
+        font: 400 20px/100% var(--ft-family);
+        color: var(--text-calc);
+    }
+
+    .screen-result{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        & span{
+            font: 400 20px/100% var(--ft-family);
+            color: var(--text-calc);
+        }
+
+        #result{
+            color: var(--text);
+            font: 500 36px/100% var(--ft-family);
+        }
+    }
+}
+
+.buttons-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    & button{
+        border: 0;
+        width: 64px;       
+        height: 64px;     
+        border-radius: 50%;
+        display: flex;    
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        color: var(--text);
+        background-color: #2D2A37;
+background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), #2D2A37;
+box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.06);
+    }
+
+    & button img{
+        width: 28px;
+        height: 28px;
+    }
+
+    & .operator{
+        background-color: var(--purple-black);
+    }
+
+    & .equal{
+        background-color: #7F45E2;
+    }
+}
